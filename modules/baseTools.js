@@ -2,6 +2,8 @@ import {canvas} from './canvas'
 import {createTxt} from './addText'
 import {createCircle,createSquare} from './shapes'
 import {sendToBack,sendToFront} from './frontBack'
+import {deleteObj} from './deletObjects'
+
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
 	let tools = document.querySelector(".tools");
@@ -75,7 +77,7 @@ const toggleTools=(event)=>{
 				break;
 			case "Delete object":
 				canvas.isDrawingMode = false;
-				deleteobj();
+				deleteObj();
 				break;
 			default:
 		}
