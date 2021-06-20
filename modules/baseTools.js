@@ -1,5 +1,6 @@
 import {canvas} from './canvas'
 import {createTxt} from './addText'
+import {createCircle,createSquare} from './shapes'
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
 	let tools = document.querySelector(".tools");
