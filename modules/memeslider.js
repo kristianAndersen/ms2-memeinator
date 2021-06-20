@@ -14,6 +14,7 @@ const thumbslider = (allmemes) => {
         imageEl.setAttribute("width", "auto");
         imageEl.setAttribute("alt", meme.name);
         imageEl.setAttribute("data-url", meme.url);
+        imageEl.setAttribute("loading", "lazy");
         memeslider.appendChild(imageEl);
 
         imageEl.addEventListener("click", loadMemeFromUrl, false);

@@ -1,4 +1,5 @@
 import {canvas} from './canvas'
+import {createTxt} from './addText'
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
 	let tools = document.querySelector(".tools");
