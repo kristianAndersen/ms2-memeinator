@@ -11,6 +11,10 @@ const createTxt=()=>{
         editable: true
     });
 
+    txtField.on("mousedblclick", function(e) {
+    txtField.enterEditing();
+    txtField.hiddenTextarea.focus();
+    })
     canvas.add(txtField);
     canvas.viewportCenterObject(txtField); 
 }
