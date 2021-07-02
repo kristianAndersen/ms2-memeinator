@@ -1,6 +1,6 @@
 import {scaleToFit} from './scaleToFit'
 import { fabric } from "fabric";
-import {dragScroll} from './dragScroll'
+
 let memeslider = document.querySelector('.memeslider')
 
 //fill the meme selector with images from imgflip

@@ -4,7 +4,7 @@ import {canvas} from './canvas'
 const createTxt=()=>{
 
     console.log(canvas.getWidth())
-    let txtField = new fabric.Textbox(
+    let txtField = new fabric.IText(
         'YourMemeTxt', {
         textAlign: 'center',
         fill: '#000',
