@@ -4,7 +4,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 :root{
   /* Breakpoints*/
@@ -47,6 +47,8 @@ html{
   background-color: rgba(var(--bgDark),0.9);
   background-color: rgba(var(--bgDark),1);
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
 }
 body{
   overflow: hidden;
@@ -59,22 +61,40 @@ body{
   overflow: hidden;
 }
 
+
+
+.memeselector {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+ overflow-x: hidden;
+ overflow-y: hidden;
+
+}
+
+.memeselector::-webkit-scrollbar {
+  display: none; 
+  overflow-x: scroll;
+}
+
+
 .memeselector{
   width: 100%;
   height: 10rem;
   background-color: rgba(var(--bgDark),0.9);
-  
-  overflow-y: hidden;
-}
-.memeslider{
 
 }
+
 .memeslider > img{
 border-radius: 2rem;
 padding: 0.2rem;
 }
 .memeframe{
-  position: relative;
+  position: absolute;
+  position: absolute;
+  left: 0; 
+right: 0; 
+margin-left: auto; 
+margin-right: auto; 
   width: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -86,31 +106,7 @@ padding: 0.2rem;
   margin: 0 auto;
   
 }
-/*FALLback for the ancient ones*/
-@supports not (aspect-ratio: 1 / 1) {
-  .memeditor::before {
-    float: left;
-    padding-top: 100%;
-    content: "";
-  }
 
-  .memeditor::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-  .memeframe::before {
-      float: left;
-      padding-top: 100%;
-      content: "";
-    }
-  
-    .memeframe::after {
-      display: block;
-      content: "";
-      clear: both;
-    }
-}
 
 .memearrea{
   position: absolute;
@@ -294,7 +290,7 @@ pointer-events: none;
 .toolExtention{
 position: absolute;
 width: 100%;
-height: 100%;
+height: 20%;
 background-color: beige;
 }
 /*Tool extention color selector*/
@@ -354,7 +350,26 @@ background-color: beige;
   margin-left: 1rem;
   color: rgba(var(--lightblue),1);
 }
+
+
+
+@media (min-width: 768px) {
+  .memeframe{
+    width: 80%;
+    aspect-ratio: 1 / 1;
+  }
+
+
+}
+
+@media (min-width: 950px) {
+
+  .memeframe{
+    width: 65vh;
+    aspect-ratio: 1 / 1;
+  }
+
+}
 /* @media (min-width: 576px) {}
-@media (min-width: 768px) {}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {} */
+
+@media (min-width: 1200px) */

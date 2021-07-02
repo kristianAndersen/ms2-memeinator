@@ -1,6 +1,6 @@
 import {scaleToFit} from './scaleToFit'
 import { fabric } from "fabric";
-
+import {dragScroll} from './dragScroll'
 let memeslider = document.querySelector('.memeslider')
 
 //fill the meme selector with images from imgflip
@@ -12,6 +12,7 @@ const thumbslider = (allmemes) => {
         imageEl.src = meme.url;
         imageEl.setAttribute("height", "100rem");
         imageEl.setAttribute("width", "auto");
+        imageEl.setAttribute("class", "scrollimage");
         imageEl.setAttribute("alt", meme.name);
         imageEl.setAttribute("data-url", meme.url);
         imageEl.setAttribute("loading", "lazy");
@@ -35,12 +36,17 @@ const setmemesliderWidth = (msWidth) => {
 };
 
 const loadMemeFromUrl=(e)=>{
-    let clickedMeme= e.target.getAttribute('data-url')
-    console.log(clickedMeme)
-   fabric.Image.fromURL(clickedMeme, (img) => {
-        scaleToFit(img);
-    });
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+        let clickedMeme= e.target.getAttribute('data-url')
+        console.log(clickedMeme)
+        fabric.Image.fromURL(clickedMeme, (img) => {
+            scaleToFit(img);
+        });
     
+
+
 }
 
 export { thumbslider,loadMemeFromUrl };
