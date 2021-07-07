@@ -5,9 +5,10 @@ const createTxt=()=>{
 
     console.log(canvas.getWidth())
     let txtField = new fabric.IText(
-        'YourMemeTxt', {
+        'Dubbel click to edit', {
         textAlign: 'center',
-        fill: '#000',
+        fontFamily:'Anton',
+        fill: '#999',
         editable: true
     });
 

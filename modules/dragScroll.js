@@ -15,7 +15,7 @@ let initial, now, time, distance, velocity, amplitude, target;
 
 
 const dragScroll = (e) => {
-    console.log("wassup")
+  
     slider.style.cursor = 'grabbing';
     slider.style.userSelect = 'none';
 

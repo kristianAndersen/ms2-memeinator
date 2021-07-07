@@ -51,7 +51,7 @@ html {
   background-color: rgba(var(--bgDark), 1);
   font-size: 62.5%;
   scroll-behavior: smooth;
-
+  font-family: 'Anton', sans-serif;
 }
 
 body {
@@ -324,13 +324,45 @@ li:hover {
 .fas {
   pointer-events: none;
 }
+.closebtn{
+  float: right;
+  margin-right: 1rem;
+  text-align: center;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  list-style-type: none;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(5, 5, 5, 1) 65%, rgba(129, 255, 249, 0.5) 70%);
+  border-radius: 100%;
+  border: 1px solid rgb(82, 82, 82);
+  color: rgb(101, 144, 172);
+  pointer-events: all;
+}
+
+.closebtn i {
+  font-size: 1.5rem;
+  padding-top: 0.4rem;
+ margin: 0 auto;
+}
 
 .toolExtention {
   position: absolute;
   width: 100%;
-
+height: auto;
+padding-top: 2rem;
   bottom: -15rem;
-  background-color: beige;
+  background-color:rgba(var(--bgDark), 1);
+}
+
+.toolExtentionShow {
+  bottom: 0rem;
+  transition: bottom 1s;
+}
+
+.toolExtentionHide {
+  bottom: -15rem;
+  transition: bottom 1s;
 }
 
 /*Tool extention color selector*/
@@ -346,8 +378,8 @@ li:hover {
   right: 0;
   margin-right: 2rem;
   border-radius: 100%;
-  width: 4rem;
-  height: 4rem;
+  width: 8rem;
+  height: 8rem;
   background-color: rgba(var(--bgDark), 1);
 }
 

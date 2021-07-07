@@ -17,6 +17,7 @@ import {canvas} from './canvas'
 		let finalAspectRatio = Math.min(widthAspectRatio, heightAspectRatio);
 
 		canvas.add(img)
+		canvas.setActiveObject(img);
         img.scale(finalAspectRatio);
       
         canvas.viewportCenterObject(img); 

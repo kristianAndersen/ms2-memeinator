@@ -3,15 +3,18 @@ import {createTxt} from './addText'
 import {createCircle,createSquare} from './shapes'
 import {sendToBack,sendToFront} from './frontBack'
 import {deleteObj} from './deletObjects'
+import {drawit} from './freehandDrawing'
+import {changeColor} from './changeColor'
 
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
 	let tools = document.querySelector(".tools");
-
+	let clicked=false;
 
 const toggleTools=(event)=>{
 		// as we're listening at the menu level, and #hey
 		//  is a child of menu, we need to filter that out.
+
 
 		let theTool = event.target;
 		let tooltitle = event.target.getAttribute("title");
@@ -26,8 +29,14 @@ const toggleTools=(event)=>{
 		}
 		theTool.classList.remove("inactivetool");
 		theTool.classList.add("toolactive");  
-
+		
 		switch (tooltitle) {
+
+			case "Move tool":
+				canvas.isDrawingMode = false;
+				canvas.discardActiveObject().renderAll();
+				break;
+
 			case "Upload an image":
 				canvas.isDrawingMode = false;
 				//uploadImage();
@@ -62,6 +71,7 @@ const toggleTools=(event)=>{
 				sendToBack()
 				break		
 			case "Select color":
+				changeColor()
 				canvas.isDrawingMode = false;
 				break;
 			case "Group objects":
@@ -80,8 +90,9 @@ const toggleTools=(event)=>{
 				break;
 			default:
 		}
-		
+	
 	  }
+
       tools.addEventListener("click", toggleTools);
 
       export {toggleTools}

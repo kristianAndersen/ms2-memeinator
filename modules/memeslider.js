@@ -40,11 +40,12 @@ const loadMemeFromUrl=(e)=>{
     e.stopImmediatePropagation();
 
         let clickedMeme= e.target.getAttribute('data-url')
-        console.log(clickedMeme)
-        fabric.Image.fromURL(clickedMeme, (img) => {
+       
+       let img= fabric.Image.fromURL(clickedMeme, (img) => {
             scaleToFit(img);
-        });
-    
+           
+        },{crossOrigin:'anonymous'});
+       
 
 
 }

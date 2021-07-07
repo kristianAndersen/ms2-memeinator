@@ -1,4 +1,5 @@
  import { fabric } from "fabric";
+ import { hexToRgb } from "./changeColor";
 
  const memeditor = document.querySelector('.memeditor')
     //create a new fabric canvas
@@ -10,6 +11,8 @@
     });
     canvas.isDrawingMode = false;
     let isDrawing = false;
+    
+    canvas.on("object:selected", function(e){console.log(e.target);});
 
 
     const controlsUtils = fabric.controlsUtils
@@ -21,5 +24,6 @@
       withConnection: true,
       actionName: 'rotate',
     });
+    
 
     export {canvas};
