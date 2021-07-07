@@ -20,8 +20,9 @@ const thumbslider = (allmemes) => {
 
         imageEl.addEventListener("click", loadMemeFromUrl, false);
 
+        //get the loadet images offsetwidth to get both width+padding
         imageEl.addEventListener("load", function () {
-            setmemesliderWidth(imageEl.width);
+            setmemesliderWidth(imageEl.offsetWidth);
         });
 
     });
@@ -31,7 +32,6 @@ const thumbslider = (allmemes) => {
 let iWidth = 0;
 const setmemesliderWidth = (msWidth) => {
     iWidth += msWidth
-  memeslider.setAttribute('style', `width:${iWidth+'px'}`);
   memeslider.style.width=iWidth+'px'
 };
 

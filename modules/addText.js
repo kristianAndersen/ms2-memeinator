@@ -15,6 +15,12 @@ const createTxt=()=>{
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
+
+    txtField.on("touch:longpress", function(e) {
+        txtField.enterEditing();
+        txtField.hiddenTextarea.focus();
+    })
+
     canvas.add(txtField);
     canvas.viewportCenterObject(txtField); 
 }

@@ -6,7 +6,8 @@
   color: #2c3e50;
 
 }
-:root{
+
+:root {
   /* Breakpoints*/
   --bp-small: 320px;
   --bp-medium: 768px;
@@ -14,14 +15,14 @@
   --bp-huge: 1400px;
   /*colors*/
   /*222222fd*/
-  --bgDark:34, 34, 34;
+  --bgDark: 34, 34, 34;
   /*1f1f1f*/
- --borderDark:61, 61, 61;
- /*383838*/
- --memeArreaDark:56, 56, 56;
+  --borderDark: 61, 61, 61;
+  /*383838*/
+  --memeArreaDark: 56, 56, 56;
 
- /*78e8ff*/
- --lightblue:120, 232, 255;
+  /*78e8ff*/
+  --lightblue: 120, 232, 255;
 
 }
 
@@ -38,22 +39,26 @@
   box-sizing: border-box;
 }
 
-html,body{
-height: 100% !important;
-width: 100% !important;
+html,
+body {
+  height: 100% !important;
+  width: 100% !important;
 
 }
-html{
-  background-color: rgba(var(--bgDark),0.9);
-  background-color: rgba(var(--bgDark),1);
+
+html {
+  background-color: rgba(var(--bgDark), 0.9);
+  background-color: rgba(var(--bgDark), 1);
   font-size: 62.5%;
   scroll-behavior: smooth;
 
 }
-body{
+
+body {
   overflow: hidden;
 }
-.wrap{
+
+.wrap {
   position: relative;
   height: 100%;
   width: 100%;
@@ -64,81 +69,90 @@ body{
 
 
 .memeselector {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
- overflow-x: hidden;
- overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
 }
 
 .memeselector::-webkit-scrollbar {
-  display: none; 
+  display: none;
   overflow-x: scroll;
 }
 
 
-.memeselector{
+.memeselector {
   width: 100%;
   height: 10rem;
-  background-color: rgba(var(--bgDark),0.9);
+  background-color: rgba(var(--bgDark), 0.9);
   overflow-x: scroll;
 }
 
-.memeslider > img{
-border-radius: 2rem;
-padding: 0.2rem;
+.memeslider {
+  height: 100%;
 }
-.memeframe{
-  position: absolute;
-  position: absolute;
-  left: 0; 
-right: 0; 
-margin-left: auto; 
-margin-right: auto; 
+
+.memeslider>img {
+  border-radius: 2rem;
+  padding: 0.2rem;
+}
+
+.memeframe {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   aspect-ratio: 1 / 1;
 }
-.memeditor{
+
+.memeditor {
   width: 100%;
   aspect-ratio: 1 / 1;
-  padding-right:0;padding-left:0;padding-top:0;
-  margin-right:-15px;margin-left:-12px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+  margin-right: -15px;
+  margin-left: -12px;
   margin: 0 auto;
-  
+
 }
 
 
-.memearrea{
+.memearrea {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   height: 90%;
-  border: dashed 0.1rem rgba(var(--lightblue),1);
-pointer-events: none;
+  border: dashed 0.1rem rgba(var(--lightblue), 1);
+  pointer-events: none;
   z-index: 1;
 }
-
-.memeeditortools{
+/*HEYYYYYYYY*/
+.memeeditortools {
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom:0;
+  position: relative;
   right: 0;
   width: 100%;
-  height: 14rem;
+  height: 10rem;
   text-align: center;
   margin: 0 auto;
-  
+
 }
-.rangesliders{
+
+.rangesliders {
   display: block;
-  position:absolute;
+  position: absolute;
   width: 100%;
   bottom: 0;
- 
+
 }
+
 input[type=range] {
   width: 95%;
   margin-top: 1rem;
@@ -146,11 +160,14 @@ input[type=range] {
   background-color: transparent;
   -webkit-appearance: none;
 }
+
 input[type=range]:focus {
   outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
-  background: rgb(101, 144, 172);;
+  background: rgb(101, 144, 172);
+  ;
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 2rem;
@@ -158,6 +175,7 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 0.5rem;
   cursor: pointer;
 }
+
 input[type=range]::-webkit-slider-thumb {
   margin-top: -0.8rem;
   width: 2rem;
@@ -169,6 +187,7 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
 }
+
 input[type=range]:hover::-webkit-slider-thumb {
   background: rgb(171, 236, 245);
 }
@@ -176,6 +195,7 @@ input[type=range]:hover::-webkit-slider-thumb {
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #0cd0c9;
 }
+
 input[type=range]::-moz-range-track {
   background: #0bb8b2;
   border: 0px solid rgba(0, 0, 0, 0);
@@ -185,6 +205,7 @@ input[type=range]::-moz-range-track {
   height: 0.5rem;
   cursor: pointer;
 }
+
 input[type=range]::-moz-range-thumb {
   width: 2rem;
   height: 2rem;
@@ -204,22 +225,27 @@ input[type=range]::-ms-track {
   height: 0.5rem;
   cursor: pointer;
 }
+
 input[type=range]::-ms-fill-lower {
-  background: rgb(101, 144, 172);;
-  border: 0px ;
-  border: 0;
-  border-radius: 4.8rem;
-}
-input[type=range]::-ms-fill-upper {
-  background: rgb(101, 144, 172);;
+  background: rgb(101, 144, 172);
+  ;
   border: 0px;
   border: 0;
   border-radius: 4.8rem;
 }
+
+input[type=range]::-ms-fill-upper {
+  background: rgb(101, 144, 172);
+  ;
+  border: 0px;
+  border: 0;
+  border-radius: 4.8rem;
+}
+
 input[type=range]::-ms-thumb {
   width: 2rem;
   height: 2rem;
-  background:rgb(101, 144, 172);
+  background: rgb(101, 144, 172);
   border: 0px;
   border: 0;
   border-radius: 5rem;
@@ -227,15 +253,19 @@ input[type=range]::-ms-thumb {
   margin-top: 0px;
   /*Needed to keep the Edge thumb centred*/
 }
+
 input[type=range]:focus::-ms-fill-lower {
   background: #0bb8b2;
 }
+
 input[type=range]:focus::-ms-fill-upper {
   background: #0cd0c9;
 }
+
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/
 @supports (-ms-ime-align:auto) {
+
   /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
   input[type=range] {
     margin: 0;
@@ -244,132 +274,209 @@ how to remove the virtical space around the range input in IE*/
 }
 
 ul {
-list-style-type: none;
-padding-top: 0rem;
-width: 100%;
-height: 100%;
-text-align: center;
-pointer-events: none;
-}
-
-ul > li{
-display: inline-block;
-width: 3.5rem;
-height:3.5rem;
-list-style-type: none;
-cursor: pointer;
-background:radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(5,5,5,1) 65%, rgba(129,255,249,0.5) 70%);/*radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(5,5,5,1) 93%, rgba(64,64,64,1) 80%, rgba(129,255,249,1) 90%);*/
-border-radius: 100%;
-border: 1px solid rgb(82, 82, 82);
-color: rgb(101, 144, 172);
-pointer-events: all;
-}
-
-li i{
-  font-size: 1.5rem;
-  padding-top: 1rem;
-/*  color: rgb(101, 144, 172);*/
-}
-li:hover{
-  color:rgb(171, 236, 245);
-}
-.toolactive{
-  color:rgb(173, 222, 255);
-  transform: scale(1.2);
-  transition: 100ms ease-in;    
-}
-.inactivetool{
-  color: rgb(101, 144, 172);
-  transform: scale(0.8); 
-  transition: 150ms ease-out;
-}
-.fas{
-pointer-events: none;
-}
-
-.toolExtention{
-position: absolute;
-width: 100%;
-height: 20%;
-background-color: beige;
-}
-/*Tool extention color selector*/
-.TEColor{
+  position: relative;
+  list-style-type: none;
+  padding-top: 0rem;
   width: 100%;
   height: 100%;
-  background-color: rgba(var(--bgDark),1);
+  text-align: center;
+  pointer-events: none;
+
+
 }
-.TEcolorSample{
+
+ul>li {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  list-style-type: none;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(5, 5, 5, 1) 65%, rgba(129, 255, 249, 0.5) 70%);
+  /*radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(5,5,5,1) 93%, rgba(64,64,64,1) 80%, rgba(129,255,249,1) 90%);*/
+  border-radius: 100%;
+  border: 1px solid rgb(82, 82, 82);
+  color: rgb(101, 144, 172);
+  pointer-events: all;
+}
+
+li i {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  /*  color: rgb(101, 144, 172);*/
+}
+
+li:hover {
+  color: rgb(171, 236, 245);
+}
+
+.toolactive {
+  color: rgb(173, 222, 255);
+  transform: scale(1.2);
+  transition: 100ms ease-in;
+}
+
+.inactivetool {
+  color: rgb(101, 144, 172);
+  transform: scale(0.8);
+  transition: 150ms ease-out;
+}
+
+.fas {
+  pointer-events: none;
+}
+
+.toolExtention {
   position: absolute;
-  top:5rem;
-  right:0;
+  width: 100%;
+
+  bottom: -15rem;
+  background-color: beige;
+}
+
+/*Tool extention color selector*/
+.TEColor {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--bgDark), 1);
+}
+
+.TEcolorSample {
+  position: absolute;
+  top: 5rem;
+  right: 0;
   margin-right: 2rem;
   border-radius: 100%;
   width: 4rem;
   height: 4rem;
-  background-color: rgba(var(--bgDark),1);
+  background-color: rgba(var(--bgDark), 1);
 }
 
-.toolExtention input[type=range]{
+.toolExtention input[type=range] {
   width: 60%;
   margin-bottom: 1rem;
 }
+
 .toolExtention input[type=range]::-moz-range-track {
-  width:60%;
-}
-.toolExtention input[type=range]::-ms-track {
-  width:60%;
+  width: 60%;
 }
 
-.toolExtention .opacity{
+.toolExtention input[type=range]::-ms-track {
+  width: 60%;
+}
+
+.toolExtention .opacity {
   direction: rtl;
 }
-.red::before{
+
+.red::before {
   content: "Red";
-  margin-right: 2rem;;
-  margin-left: 1rem;;
-  color: rgba(var(--lightblue),1);
+  margin-right: 2rem;
+  ;
+  margin-left: 1rem;
+  ;
+  color: rgba(var(--lightblue), 1);
 
 }
-.green::before{
+
+.green::before {
   content: "Green";
   margin-right: 1rem;
   margin-left: 1rem;
-  color: rgba(var(--lightblue),1);
+  color: rgba(var(--lightblue), 1);
 }
 
-.blue::before{
+.blue::before {
   content: "Blue";
   margin-right: 2rem;
   margin-left: 1rem;
-  color: rgba(var(--lightblue),1);
+  color: rgba(var(--lightblue), 1);
 }
-.opacity::after{
+
+.opacity::after {
   content: "Alpha";
   margin-right: 1.5rem;
   margin-left: 1rem;
-  color: rgba(var(--lightblue),1);
+  color: rgba(var(--lightblue), 1);
 }
 
 
 
 @media (min-width: 768px) {
-  .memeframe{
+  .memeframe {
     width: 80%;
     aspect-ratio: 1 / 1;
   }
 
+  .memeselector {
+    width: 95vw;
+    margin: 0 auto;
+    border-radius: 2rem;
+  }
 
+  ul>li {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  li i {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
 }
 
 @media (min-width: 950px) {
 
-  .memeframe{
+  .memeframe {
     width: 65vh;
     aspect-ratio: 1 / 1;
   }
 
-}
-/* @media (min-width: 576px) {}
+  ul>li {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 
-@media (min-width: 1200px) */
+  li i {
+    font-size: 2.2rem;
+    padding-top: 2rem;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  .memeselector {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 2rem;
+  }
+
+  .memeframe {
+    width: 75vh;
+    aspect-ratio: 1 / 1;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-top: 4rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    pointer-events: none;
+
+  }
+
+  ul>li {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  li i {
+    font-size: 2rem;
+    padding-top: 1.2rem;
+  }
+
+}
+
+/* @media (min-width: 576px) {}
+/

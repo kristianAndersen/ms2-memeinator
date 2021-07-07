@@ -63,7 +63,7 @@ const mouseupHandler = (e) => {
     memeslider.style.pointerEvents = 'all'
     slider.style.cursor = 'grab';
 
-    if (velocity < -0.5 || velocity > 0.5) {
+    if (velocity < -0.9 || velocity > 0.9) {
         amplitude = velocity * -1000;
         target = Math.round(amplitude + slider.scrollLeft);
 
