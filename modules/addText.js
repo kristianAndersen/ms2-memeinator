@@ -13,11 +13,13 @@ const createTxt=()=>{
     });
 
     txtField.on("mousedblclick", function(e) {
+        e.preventDefault();
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
 
     txtField.on("touch:longpress", function(e) {
+        e.preventDefault();
         txtField.enterEditing();
         txtField.hiddenTextarea.focus();
     })
