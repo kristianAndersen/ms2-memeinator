@@ -5,6 +5,7 @@ import {sendToBack,sendToFront} from './frontBack'
 import {deleteObj} from './deletObjects'
 import {drawit} from './freehandDrawing'
 import {changeColor} from './changeColor'
+import {uploadImage} from './uploadImage'
 
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
@@ -39,7 +40,7 @@ const toggleTools=(event)=>{
 
 			case "Upload an image":
 				canvas.isDrawingMode = false;
-				//uploadImage();
+				uploadImage();
 				break;
 			case "Text":
 				canvas.isDrawingMode = false;
