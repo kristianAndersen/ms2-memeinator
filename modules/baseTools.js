@@ -25,8 +25,9 @@ const toggleTools=(event)=>{
         looping all the tools and if they are not the current tool make them inactive*/
 		for (let i=0; i<alltools.length; i++){
 		  if(alltools[i] != theTool) {
+			alltools[i].classList.remove("toolactive");
 			alltools[i].classList.add("inactivetool");
-			//alltools[i].classList.remove("toolactive");
+			//
 		  }
 		}
 		theTool.classList.remove("inactivetool");

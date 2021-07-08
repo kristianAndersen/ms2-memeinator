@@ -1,26 +1,10 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-
-}
 
 :root {
-  /* Breakpoints*/
-  --bp-small: 320px;
-  --bp-medium: 768px;
-  --bp-large: 1024px;
-  --bp-huge: 1400px;
   /*colors*/
-  /*222222fd*/
+  /*222222*/
   --bgDark: 34, 34, 34;
-  /*1f1f1f*/
-  --borderDark: 61, 61, 61;
-  /*383838*/
-  --memeArreaDark: 56, 56, 56;
-
+  /*6590ac*/
+  --darkblue:101,144,172;
   /*78e8ff*/
   --lightblue: 120, 232, 255;
 
@@ -47,7 +31,6 @@ body {
 }
 
 html {
-  background-color: rgba(var(--bgDark), 0.9);
   background-color: rgba(var(--bgDark), 1);
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -132,7 +115,7 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-/*HEYYYYYYYY*/
+
 .memeeditortools {
   display: flex;
   justify-content: center;
@@ -166,8 +149,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background: rgb(101, 144, 172);
-  ;
+  background: rgba(var(--darkblue), 0.9);
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 2rem;
@@ -180,7 +162,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -0.8rem;
   width: 2rem;
   height: 2rem;
-  background: #78e8ff;
+  background: rgba(var(--lightblue), 1);
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 5rem;
@@ -189,15 +171,15 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:hover::-webkit-slider-thumb {
-  background: rgb(171, 236, 245);
+  background: rgba(var(--lightblue), 1);
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #0cd0c9;
+  background: rgba(var(--darkblue), 0.9);
 }
 
 input[type=range]::-moz-range-track {
-  background: #0bb8b2;
+  background: rgba(var(--darkblue), 0.9);
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 2rem;
@@ -209,7 +191,7 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   width: 2rem;
   height: 2rem;
-  background: #78e8ff;
+  background:  rgba(var(--lightblue), 1);
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 0.5rem;
@@ -227,16 +209,14 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background: rgb(101, 144, 172);
-  ;
+  background: rgba(var(--darkblue), 0.9);
   border: 0px;
   border: 0;
   border-radius: 4.8rem;
 }
 
 input[type=range]::-ms-fill-upper {
-  background: rgb(101, 144, 172);
-  ;
+  background: rgba(var(--darkblue), 0.9);
   border: 0px;
   border: 0;
   border-radius: 4.8rem;
@@ -245,7 +225,7 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   width: 2rem;
   height: 2rem;
-  background: rgb(101, 144, 172);
+  background:  rgba(var(--lightblue), 1);
   border: 0px;
   border: 0;
   border-radius: 5rem;
@@ -255,11 +235,11 @@ input[type=range]::-ms-thumb {
 }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: #0bb8b2;
+  background: rgba(var(--darkblue), 0.9);
 }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: #0cd0c9;
+  background: rgba(var(--darkblue), 0.9);
 }
 
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
@@ -292,32 +272,31 @@ ul>li {
   list-style-type: none;
   cursor: pointer;
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(5, 5, 5, 1) 65%, rgba(129, 255, 249, 0.5) 70%);
-  /*radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(5,5,5,1) 93%, rgba(64,64,64,1) 80%, rgba(129,255,249,1) 90%);*/
   border-radius: 100%;
   border: 1px solid rgb(82, 82, 82);
-  color: rgb(101, 144, 172);
+
   pointer-events: all;
 }
 
 li i {
   font-size: 1.5rem;
   padding-top: 1rem;
-  /*  color: rgb(101, 144, 172);*/
+ 
 }
 
 li:hover {
-  color: rgb(171, 236, 245);
+  color: rgba(var(--lightblue), 1);
 }
 
 .toolactive {
-  color: rgb(173, 222, 255);
-  transform: scale(1.2);
+  color: rgba(var(--lightblue), 1);
+  transform: scale(1);
   transition: 100ms ease-in;
 }
 
 .inactivetool {
-  color: rgb(101, 144, 172);
-  transform: scale(0.8);
+  color: rgba(var(--lightblue), 0.5);
+  transform: scale(0.7);
   transition: 150ms ease-out;
 }
 
@@ -338,7 +317,7 @@ li:hover {
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(5, 5, 5, 1) 65%, rgba(129, 255, 249, 0.5) 70%);
   border-radius: 100%;
   border: 1px solid rgb(82, 82, 82);
-  color: rgb(101, 144, 172);
+
   pointer-events: all;
 }
 
@@ -346,6 +325,7 @@ li:hover {
   font-size: 1.5rem;
   padding-top: 0.4rem;
  margin: 0 auto;
+ color: rgba(var(--lightblue), 1);
 }
 
 .toolExtention {
