@@ -1,5 +1,7 @@
 
+# THE MEMEINATOR
 
+![mockup](./wireframes/mockup.png)
 # Table of contents
 
  **_UX:_**
