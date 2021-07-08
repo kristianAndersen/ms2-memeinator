@@ -24,6 +24,12 @@ const createTxt=()=>{
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
+
+    txtField.on("touchstart", function (e) {
+        e.preventDefault();
+        txtField.enterEditing();
+         txtField.hiddenTextarea.focus();
+      }, false);
   
 }
 
