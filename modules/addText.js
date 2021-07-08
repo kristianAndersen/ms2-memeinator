@@ -8,7 +8,9 @@ const createTxt=()=>{
         'Dubbel click to edit', {
         textAlign: 'center',
         fontFamily:'Anton',
-        fill: '#999',
+        strokeWidth: 2,
+        stroke: 'black',
+        fill: '#fff',
         editable: true
     });
 

@@ -6,30 +6,25 @@ const red=document.querySelector('.red')
 const green=document.querySelector('.green')
 const blue=document.querySelector('.blue')
 const opacity=document.querySelector('.opacity')
+
 const toolEX=document.querySelector('.toolExtention')
 const TEcolorSample=document.querySelector('.TEcolorSample')
 const closeBtn=document.querySelector('.closebtn')
-let webglBackend;
+const memeframe=document.querySelector('.memeframe')
 
-try {
-  webglBackend = new fabric.WebglFilterBackend();
-} catch (e) {
-  console.log(e)
-}
-let canvas2dBackend = new fabric.Canvas2dFilterBackend()
+let memeframeHeight=memeframe.offsetHeight
+let memeframeHeightTop=memeframe.offsetTop
 
-fabric.filterBackend = fabric.initFilterBackend()
+let showHide=(memeframeHeight+memeframeHeightTop)
+
 
 const showColorTool=()=>{
-    toolEX.classList.remove("toolExtentionHide");
-    toolEX.classList.add("toolExtentionShow");
+toolEX.style.bottom= -showHide+'px';;
+toolEX.style.transition = "all 1s";
 }
-
 const hideColor=()=>{
-    
-    toolEX.classList.add("toolExtentionHide");
-    toolEX.classList.remove("toolExtentionShow");
-
+  toolEX.style.bottom= -100+'%';
+  toolEX.style.transition = "all 1s";
 }
 
 closeBtn.addEventListener('click',  hideColor);

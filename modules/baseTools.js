@@ -6,6 +6,7 @@ import {deleteObj} from './deletObjects'
 import {drawit} from './freehandDrawing'
 import {changeColor} from './changeColor'
 import {uploadImage} from './uploadImage'
+import {saveImage} from './saveImage'
 
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
@@ -83,7 +84,7 @@ const toggleTools=(event)=>{
 				break;
 			case "Download your fresh meme":
 				canvas.isDrawingMode = false;
-				//saveImage();
+				saveImage();
 				break;
 			case "Delete object":
 				canvas.isDrawingMode = false;

@@ -325,7 +325,9 @@ li:hover {
   pointer-events: none;
 }
 .closebtn{
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 1rem;
   margin-right: 1rem;
   text-align: center;
   display: block;
@@ -349,9 +351,8 @@ li:hover {
 .toolExtention {
   position: absolute;
   width: 100%;
-height: auto;
-padding-top: 2rem;
-  bottom: -15rem;
+  height: 100%;
+  bottom: -100%;
   background-color:rgba(var(--bgDark), 1);
 }
 
@@ -384,23 +385,26 @@ padding-top: 2rem;
 }
 
 .toolExtention input[type=range] {
-  width: 60%;
+  position: relative;
+  float: left;
+  width: 65%;
+  direction: rtl;
   margin-bottom: 1rem;
 }
 
 .toolExtention input[type=range]::-moz-range-track {
-  width: 60%;
+  width: 65%;
 }
 
 .toolExtention input[type=range]::-ms-track {
-  width: 60%;
+  width: 65%;
 }
 
 .toolExtention .opacity {
   direction: rtl;
 }
 
-.red::before {
+.red::after {
   content: "Red";
   margin-right: 2rem;
   ;
@@ -410,14 +414,14 @@ padding-top: 2rem;
 
 }
 
-.green::before {
+.green::after {
   content: "Green";
   margin-right: 1rem;
   margin-left: 1rem;
   color: rgba(var(--lightblue), 1);
 }
 
-.blue::before {
+.blue::after {
   content: "Blue";
   margin-right: 2rem;
   margin-left: 1rem;
@@ -472,9 +476,17 @@ padding-top: 2rem;
     font-size: 2.2rem;
     padding-top: 2rem;
   }
-
+  .toolExtention {
+    width: 70%;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  }
 
 }
+
 
 @media (min-width: 1200px) {
   .memeselector {
@@ -506,6 +518,17 @@ padding-top: 2rem;
   li i {
     font-size: 2rem;
     padding-top: 1.2rem;
+  }
+  .tools{
+    max-width: 40vw;
+  }
+  .toolExtention {
+    background-color: #b80b8d;
+    max-width: 40vw;
+  }
+  .TEColor {
+    width: 100%;
+    height: 100%;
   }
 
 }
