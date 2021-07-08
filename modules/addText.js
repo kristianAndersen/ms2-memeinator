@@ -11,10 +11,12 @@ const createTxt=()=>{
         strokeWidth: 2,
         stroke: 'black',
         fill: '#fff',
+        padding: 20,
         editable: true
     });
 
-
+    canvas.add(txtField);
+    canvas.viewportCenterObject(txtField); 
 
     txtField.on({'touch:longpress': function() {
         e.preventDefault();
@@ -27,8 +29,7 @@ const createTxt=()=>{
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
-    canvas.add(txtField);
-    canvas.viewportCenterObject(txtField); 
+  
 }
 
 export {createTxt}
