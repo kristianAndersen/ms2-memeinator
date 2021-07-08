@@ -18,13 +18,8 @@ const createTxt=()=>{
     canvas.add(txtField);
     canvas.viewportCenterObject(txtField); 
 
-    txtField.on({'touch:longpress': function() {
-        e.preventDefault();
-        txtField.enterEditing();
-        txtField.hiddenTextarea.focus();
-        }
-      });
-      txtField.on("mousedblclick", function(e) {
+  
+      txtField.on("mouse:down", function(e) {
         e.preventDefault();
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
