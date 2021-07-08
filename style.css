@@ -79,6 +79,9 @@ body {
 .memeslider>img {
   border-radius: 2rem;
   padding: 0.2rem;
+  height: 10rem;
+  width: auto;
+  
 }
 
 .memeframe {
@@ -123,8 +126,8 @@ body {
   right: 0;
   width: 100%;
   height: 10rem;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 
 }
 
@@ -136,108 +139,98 @@ body {
 
 }
 
+
 input[type=range] {
-  width: 95%;
+  width: 100%;
   margin-top: 1rem;
   margin-bottom: 2rem;
   background-color: transparent;
   -webkit-appearance: none;
+  direction: rtl;
 }
-
 input[type=range]:focus {
   outline: none;
 }
-
 input[type=range]::-webkit-slider-runnable-track {
-  background: rgba(var(--darkblue), 0.9);
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-  border-radius: 2rem;
   width: 100%;
   height: 0.5rem;
   cursor: pointer;
-}
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: rgba(var(--darkblue), 0.9);
 
+  border-radius: 2.5rem;
+  border: 0px solid #000101;
+}
 input[type=range]::-webkit-slider-thumb {
-  margin-top: -0.8rem;
-  width: 2rem;
-  height: 2rem;
-  background: rgba(var(--lightblue), 1);
-  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 0;
-  border-radius: 5rem;
+   height: 2rem;
+  width: 2rem;
+   border-radius: 5rem;
+background: rgba(var(--lightblue), 1);
   cursor: pointer;
   -webkit-appearance: none;
+  margin-top: -0.7rem;
 }
-
-input[type=range]:hover::-webkit-slider-thumb {
-  background: rgba(var(--lightblue), 1);
-}
-
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: rgba(var(--darkblue), 0.9);
-}
+   background: rgba(var(--darkblue), 0.9);
 
+}
 input[type=range]::-moz-range-track {
-  background: rgba(var(--darkblue), 0.9);
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-  border-radius: 2rem;
   width: 100%;
   height: 0.5rem;
   cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #999;
+   background: rgba(var(--darkblue), 0.9);
+  border-radius: 2.5rem;
+  border: 0px solid #000101;
 }
-
 input[type=range]::-moz-range-thumb {
-  width: 2rem;
+  box-shadow:none;
+  border: 0px solid #000000;
   height: 2rem;
-  background:  rgba(var(--lightblue), 1);
-  border: 0px solid rgba(0, 0, 0, 0);
-  border: 0;
-  border-radius: 0.5rem;
+  width: 2rem;
+  border-radius: 5rem;
+  background: rgba(var(--lightblue), 1);
   cursor: pointer;
 }
-
 input[type=range]::-ms-track {
+  width: 100%;
+  height: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
   background: transparent;
   border-color: transparent;
-  border-width: 8rem;
+  border-width: 3.9rem 0;
   color: transparent;
-  width: 100%;
-  height: 0.5rem;
-  cursor: pointer;
 }
-
 input[type=range]::-ms-fill-lower {
-  background: rgba(var(--darkblue), 0.9);
-  border: 0px;
-  border: 0;
-  border-radius: 4.8rem;
-}
+   background: rgba(var(--darkblue), 0.9);
 
-input[type=range]::-ms-fill-upper {
-  background: rgba(var(--darkblue), 0.9);
-  border: 0px;
-  border: 0;
-  border-radius: 4.8rem;
-}
-
-input[type=range]::-ms-thumb {
-  width: 2rem;
-  height: 2rem;
-  background:  rgba(var(--lightblue), 1);
-  border: 0px;
-  border: 0;
+  border: 0px solid #000101;
   border-radius: 5rem;
-  cursor: pointer;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
 }
+input[type=range]::-ms-fill-upper {
+     background: rgba(var(--darkblue), 0.9);
 
+  border: 0px solid #000101;
+  border-radius: 5rem;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5rem;
+   background: rgba(var(--lightblue), 1);
+  cursor: pointer;
+}
 input[type=range]:focus::-ms-fill-lower {
   background: rgba(var(--darkblue), 0.9);
 }
-
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(var(--darkblue), 0.9);
 }
@@ -252,7 +245,15 @@ how to remove the virtical space around the range input in IE*/
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
 }
-
+.slidewrap{
+  width:65%;
+  padding-left: 2rem;
+}
+.tools{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 ul {
   position: relative;
   list-style-type: none;
@@ -330,26 +331,25 @@ li:hover {
 
 .toolExtention {
   position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+
   width: 100%;
   height: 100%;
   bottom: -100%;
   background-color:rgba(var(--bgDark), 1);
 }
 
-.toolExtentionShow {
-  bottom: 0rem;
-  transition: bottom 1s;
-}
 
-.toolExtentionHide {
-  bottom: -15rem;
-  transition: bottom 1s;
-}
 
 /*Tool extention color selector*/
 .TEColor {
+  position: relative;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   background-color: rgba(var(--bgDark), 1);
 }
 
@@ -363,17 +363,19 @@ li:hover {
   height: 8rem;
   background-color: rgba(var(--bgDark), 1);
 }
-
+/*
 .toolExtention input[type=range] {
   position: relative;
   float: left;
   width: 65%;
   direction: rtl;
   margin-bottom: 1rem;
+  -moz-appearance:inherit 
 }
 
 .toolExtention input[type=range]::-moz-range-track {
   width: 65%;
+  -moz-appearance:inherit 
 }
 
 .toolExtention input[type=range]::-ms-track {
@@ -381,17 +383,16 @@ li:hover {
 }
 
 .toolExtention .opacity {
-  direction: rtl;
+ 
 }
-
+*/
+/*
 .red::after {
   content: "Red";
   margin-right: 2rem;
-  ;
   margin-left: 1rem;
-  ;
   color: rgba(var(--lightblue), 1);
-
+  z-index:10;
 }
 
 .green::after {
@@ -414,7 +415,7 @@ li:hover {
   margin-left: 1rem;
   color: rgba(var(--lightblue), 1);
 }
-
+*/
 
 
 @media (min-width: 768px) {
@@ -438,6 +439,12 @@ li:hover {
     font-size: 2rem;
     padding-top: 1.5rem;
   }
+  .toolExtention{
+    
+    width:80% ;
+    margin: 0 auto;
+  }
+
 }
 
 @media (min-width: 950px) {
@@ -456,14 +463,12 @@ li:hover {
     font-size: 2.2rem;
     padding-top: 2rem;
   }
-  .toolExtention {
-    width: 70%;
-    margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-text-align: center;
+  .toolExtention{
+    
+    width:80% ;
+    margin: 0 auto;
   }
+
 
 }
 
@@ -475,28 +480,32 @@ text-align: center;
     border-radius: 2rem;
   }
 
+
   .memeframe {
     position: relative;
     float: left;
     width: 50%;
+    margin-left: calc(100%-66.6%);
     max-width: 70rem;
     left: 25%;
     aspect-ratio: 1 / 1;
   }
   .memeeditortools {
-    display: flex;
-    justify-content: center;
-    position: relative;
+    width: 10%;
+    height: 100%;
+    display: block;
     float: left;
     left: 25%;
     z-index: 10;
     top:0;
-  
-    width: 5rem;
-    height: 100%;
-    text-align: center;
     margin: 0 auto;
   
+  }
+  .tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
   }
   ul {
     list-style-type: none;
@@ -518,16 +527,12 @@ text-align: center;
     padding-top: 1.2rem;
   }
 
-  .toolExtention {
-    background-color: #b80b8d;
-    max-width: 40vw;
+  .toolExtention{
+    
+    width:50%;
+    max-width: 33vw;
+    margin: 0 auto;
   }
-  .TEColor {
-    width: 100%;
-    height: 100%;
-  }
+
 
 }
-
-/* @media (min-width: 576px) {}
-/

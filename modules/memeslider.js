@@ -1,4 +1,5 @@
 import {scaleToFit} from './scaleToFit'
+import {canvas} from './canvas'
 import { fabric } from "fabric";
 
 let memeslider = document.querySelector('.memeslider')
@@ -10,8 +11,8 @@ const thumbslider = (allmemes) => {
         //create an image element for each image and append it to the slider
         let imageEl = document.createElement("img");
         imageEl.src = meme.url;
-        imageEl.setAttribute("height", "100rem");
-        imageEl.setAttribute("width", "auto");
+        imageEl.setAttribute("width", meme.width);
+        imageEl.setAttribute("height", meme.height);
         imageEl.setAttribute("class", "scrollimage");
         imageEl.setAttribute("alt", meme.name);
         imageEl.setAttribute("data-url", meme.url);
