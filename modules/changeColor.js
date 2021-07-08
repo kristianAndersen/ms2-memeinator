@@ -29,9 +29,6 @@ const hideColor=()=>{
 
 closeBtn.addEventListener('click',  hideColor);
 
-if (fabric.isWebglSupported()) {
-    fabric.textureSize = fabric.maxTextureSize;
-}
 
 const changeColor=()=>{
 showColorTool()
@@ -45,13 +42,24 @@ showColorTool()
     TEcolorSample.style.opacity = rgb_opacity;
     TEcolorSample.setAttribute('data-fill', rgbToHex(rgb_red,rgb_green,rgb_blue));
 
+    //get current active object
     let obj=canvas.getActiveObject()
-    let objType = obj.get('type')
-
     if(obj){
-        
-        obj.set('fill', rgbToHex(rgb_red,rgb_green,rgb_blue));
-      
+         
+         let objType = obj.get('type')
+         console.log(obj)
+        switch(objType){
+          case 'path':
+            obj.set('stroke', rgbToHex(rgb_red,rgb_green,rgb_blue));
+          break;
+          case 'rect':
+          case 'circle':
+          case'i-text':
+          obj.set('fill', rgbToHex(rgb_red,rgb_green,rgb_blue));
+          break;
+        }
+       
+    
         obj.set({opacity: rgb_opacity});
        
         canvas.renderAll();

@@ -488,7 +488,7 @@ text-align: center;
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .memeselector {
     width: 50%;
     margin: 0 auto;
@@ -496,10 +496,28 @@ text-align: center;
   }
 
   .memeframe {
-    width: 75vh;
+    position: relative;
+    float: left;
+    width: 50%;
+    max-width: 70rem;
+    left: 25%;
     aspect-ratio: 1 / 1;
   }
-
+  .memeeditortools {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    float: left;
+    left: 25%;
+    z-index: 10;
+    top:0;
+  
+    width: 5rem;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+  
+  }
   ul {
     list-style-type: none;
     margin-top: 4rem;
@@ -519,9 +537,7 @@ text-align: center;
     font-size: 2rem;
     padding-top: 1.2rem;
   }
-  .tools{
-    max-width: 40vw;
-  }
+
   .toolExtention {
     background-color: #b80b8d;
     max-width: 40vw;

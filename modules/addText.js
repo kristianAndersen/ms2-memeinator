@@ -14,18 +14,19 @@ const createTxt=()=>{
         editable: true
     });
 
-    txtField.on("mousedblclick", function(e) {
+
+
+    txtField.on({'touch:longpress': function() {
+        e.preventDefault();
+        txtField.enterEditing();
+        txtField.hiddenTextarea.focus();
+        }
+      });
+      txtField.on("mousedblclick", function(e) {
         e.preventDefault();
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
-/*
-    txtField.on("touch:longpress", function(e) {
-        e.preventDefault();
-        txtField.enterEditing();
-        txtField.hiddenTextarea.focus();
-    })
-*/
     canvas.add(txtField);
     canvas.viewportCenterObject(txtField); 
 }
