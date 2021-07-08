@@ -1,5 +1,6 @@
 node_modules
 .DS_Store
+ .eslintrc.js
 dist
 dist-ssr
 *.local

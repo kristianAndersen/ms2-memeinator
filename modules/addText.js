@@ -1,5 +1,5 @@
 import {canvas} from './canvas'
-
+import { fabric } from 'fabric';
 //Add textfield
 const createTxt=()=>{
 

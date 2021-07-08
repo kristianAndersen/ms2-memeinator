@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */ 
 import {canvas} from './canvas'
 const saveImage=()=>{
 

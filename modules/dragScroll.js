@@ -1,12 +1,13 @@
+/*jshint esversion: 6 */ 
 /*
 kudos to Conor Murphy
 for his drag toss scoll 
 https://codepen.io/cmurphy580/pen/WXEZrw?editors=0010
 */
-console.log("dragSlide")
+console.log("dragSlide");
 
-const slider = document.querySelector('.memeselector')
-const memeslider = document.querySelector('.memeslider')
+const slider = document.querySelector('.memeselector');
+const memeslider = document.querySelector('.memeslider');
 
 let isDown = false, hasMoved = false;
 let startX, x;
@@ -28,9 +29,9 @@ const dragScroll = (e) => {
    // if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
      //   slider.style.overflowX="scroll"
     //}else{
-    slider.addEventListener('mouseleave', mouseleaveHAndler)
-    slider.addEventListener('mousemove', mousemoveHandler)
-    slider.addEventListener('mouseup', mouseupHandler)
+    slider.addEventListener('mouseleave', mouseleaveHAndler);
+    slider.addEventListener('mousemove', mousemoveHandler);
+    slider.addEventListener('mouseup', mouseupHandler);
     //}
 }
 
@@ -44,7 +45,7 @@ const mousemoveHandler = (e) => {
     if (!isDown) return;
     e.preventDefault();
     //make shure the images is not clicked while dragging
-    memeslider.style.pointerEvents = 'none'
+    memeslider.style.pointerEvents = 'none';
 
     x = e.pageX - slider.offsetLeft;
     const walk = (x - startX);
@@ -60,7 +61,7 @@ const mouseupHandler = (e) => {
     distance = (x - startX);
     velocity = (distance) / (time);
 
-    memeslider.style.pointerEvents = 'all'
+    memeslider.style.pointerEvents = 'all';
     slider.style.cursor = 'grab';
 
     if (velocity < -0.9 || velocity > 0.9) {
@@ -74,7 +75,7 @@ const mouseupHandler = (e) => {
 };
 
 const autoScroll = () => {
-    var elapsed, delta;
+    let elapsed, delta;
     if (amplitude && hasMoved) {
         elapsed = Date.now() - now;
         delta = -amplitude * Math.exp(-elapsed / 325);
@@ -91,7 +92,7 @@ const autoScroll = () => {
 
 slider.addEventListener('mousedown', dragScroll);
 
-export { dragScroll }
+export { dragScroll };
 
 /*
  const ele =document.querySelector('.memeselector')

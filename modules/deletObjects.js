@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 import { canvas } from "./canvas";
 //Delete all active objects from canvas
 const deleteObj=()=> {
@@ -6,4 +7,4 @@ const deleteObj=()=> {
     });
     canvas.discardActiveObject().renderAll();
 }
-export {deleteObj}
+export {deleteObj};

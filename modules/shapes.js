@@ -1,4 +1,6 @@
-import {canvas} from './canvas'
+/*jshint esversion: 6 */ 
+import { fabric } from 'fabric';
+import {canvas} from './canvas';
 //add a circle
 const createCircle=()=>{
     let circle = new fabric.Circle({
@@ -21,4 +23,4 @@ const createSquare=()=>{
     canvas.add(square);
     canvas.viewportCenterObject(square); 
 }
-export {createCircle,createSquare}
+export {createCircle,createSquare};

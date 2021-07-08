@@ -1,15 +1,16 @@
+/*jshint esversion: 6 */ 
+
 import {scaleToFit} from './scaleToFit'
-import {canvas} from './canvas'
 import { fabric } from "fabric";
 
-let memeslider = document.querySelector('.memeslider')
+const memeslider = document.querySelector('.memeslider')
 
 //fill the meme selector with images from imgflip
 const thumbslider = (allmemes) => {
 
-    allmemes.forEach(function (meme, index) {
+    allmemes.forEach(function (meme) {
         //create an image element for each image and append it to the slider
-        let imageEl = document.createElement("img");
+        const imageEl = document.createElement("img");
         imageEl.src = meme.url;
         imageEl.setAttribute("width", meme.width);
         imageEl.setAttribute("height", meme.height);
@@ -32,7 +33,7 @@ const thumbslider = (allmemes) => {
 //set width for meme selector scroll
 let iWidth = 0;
 const setmemesliderWidth = (msWidth) => {
-    iWidth += msWidth
+    iWidth += msWidth;
   memeslider.style.width=iWidth+'px'
 };
 
@@ -42,7 +43,7 @@ const loadMemeFromUrl=(e)=>{
 
         let clickedMeme= e.target.getAttribute('data-url')
        
-       let img= fabric.Image.fromURL(clickedMeme, (img) => {
+       fabric.Image.fromURL(clickedMeme, (img) => {
             scaleToFit(img);
            
         },{crossOrigin:'anonymous'});

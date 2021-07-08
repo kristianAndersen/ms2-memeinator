@@ -6,9 +6,11 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "eslint": "^7.30.0",
     "vite": "^2.3.7"
   },
   "dependencies": {
-    "fabric": "^4.5.1"
+    "fabric": "^4.5.1",
+    "jshint": "^2.13.0"
   }
 }

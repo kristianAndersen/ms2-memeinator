@@ -1,8 +1,9 @@
-import {canvas} from './canvas'
+/*jshint esversion: 6 */ 
+import {canvas} from './canvas';
 const drawit=()=> {
     canvas.isDrawingMode = true;
     canvas.freeDrawingBrush.width = 2;
-    canvas.freeDrawingBrush.color = "#00aeff";
+    canvas.freeDrawingBrush.color = "#666";
     
     let isDrawing = false;
     canvas.on("mousedown", (e) => {
@@ -14,9 +15,7 @@ const drawit=()=> {
             onMouseUp(e);
         })
         .on("mousemove", (e) => {
-            if (isDrawing) {
-                const pointer = canvas.getPointer(e);
-            }
+      
         });
 }
 

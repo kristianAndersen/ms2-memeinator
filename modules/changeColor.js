@@ -1,25 +1,24 @@
-import { fabric } from "fabric";
-import {canvas} from './canvas'
+import {canvas} from './canvas';
 
-const rgb=document.querySelectorAll('.rgb')
-const red=document.querySelector('.red')
-const green=document.querySelector('.green')
-const blue=document.querySelector('.blue')
-const opacity=document.querySelector('.opacity')
+const rgb=document.querySelectorAll('.rgb');
+const red=document.querySelector('.red');
+const green=document.querySelector('.green');
+const blue=document.querySelector('.blue');
+const opacity=document.querySelector('.opacity');
 
-const toolEX=document.querySelector('.toolExtention')
-const TEcolorSample=document.querySelector('.TEcolorSample')
-const closeBtn=document.querySelector('.closebtn')
-const memeframe=document.querySelector('.memeframe')
+const toolEX=document.querySelector('.toolExtention');
+const TEcolorSample=document.querySelector('.TEcolorSample');
+const closeBtn=document.querySelector('.closebtn');
+const memeframe=document.querySelector('.memeframe');
 
-let memeframeHeight=memeframe.offsetHeight
-let memeframeHeightTop=memeframe.offsetTop
+let memeframeHeight=memeframe.offsetHeight;
+let memeframeHeightTop=memeframe.offsetTop;
 
-let showHide=(memeframeHeight+memeframeHeightTop)
+let showHide=(memeframeHeight+memeframeHeightTop);
 
 
 const showColorTool=()=>{
-toolEX.style.bottom= -showHide+'px';;
+toolEX.style.bottom= -showHide+'px';
 toolEX.style.transition = "all 1s";
 }
 const hideColor=()=>{
@@ -31,7 +30,7 @@ closeBtn.addEventListener('click',  hideColor);
 
 
 const changeColor=()=>{
-showColorTool()
+showColorTool();
 
     let rgb_red = red.value;
     let rgb_green = green.value;
@@ -47,7 +46,7 @@ showColorTool()
     if(obj){
          
          let objType = obj.get('type')
-         console.log(obj)
+      
         switch(objType){
           case 'path':
             obj.set('stroke', rgbToHex(rgb_red,rgb_green,rgb_blue));
@@ -78,11 +77,12 @@ for (var i = 0; i < rgb.length; i++) {
 
 //convert RGB to HEX
 //https://nimishprabhu.com/convert-rgb-to-hex-and-hex-to-rgb-javascript-online-demo.html
+let rHex,gHex,bHex
 const rgbToHex=(r, g, b)=> {
     try {
-      var rHex = parseInt(r).toString(16).padStart(2, '0');
-      var gHex = parseInt(g).toString(16).padStart(2, '0');
-      var bHex = parseInt(b).toString(16).padStart(2, '0');
+       rHex = parseInt(r).toString(16).padStart(2, '0');
+       gHex = parseInt(g).toString(16).padStart(2, '0');
+       bHex = parseInt(b).toString(16).padStart(2, '0');
     } catch (e) {
       return false;
     }

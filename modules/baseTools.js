@@ -11,24 +11,22 @@ import {saveImage} from './saveImage'
 	/** the tools */
 	let alltools = document.querySelectorAll(".tool");
 	let tools = document.querySelector(".tools");
-	let clicked=false;
 
-const toggleTools=(event)=>{
+const toggleTools=(e)=>{
 		// as we're listening at the menu level, and #hey
 		//  is a child of menu, we need to filter that out.
 
 
-		let theTool = event.target;
-		let tooltitle = event.target.getAttribute("title");
+		let theTool = e.target;
+		let tooltitle = e.target.getAttribute("title");
 		
         /*set witch tool is active
         looping all the tools and if they are not the current tool make them inactive*/
 		for (let i=0; i<alltools.length; i++){
-		  if(alltools[i] != theTool) {
+		if(alltools[i] != theTool) {
 			alltools[i].classList.remove("toolactive");
 			alltools[i].classList.add("inactivetool");
-			//
-		  }
+		}
 		}
 		theTool.classList.remove("inactivetool");
 		theTool.classList.add("toolactive");  
@@ -39,14 +37,13 @@ const toggleTools=(event)=>{
 				canvas.isDrawingMode = false;
 				canvas.discardActiveObject().renderAll();
 				break;
-
 			case "Upload an image":
 				canvas.isDrawingMode = false;
 				uploadImage();
 				break;
 			case "Text":
 				canvas.isDrawingMode = false;
-                createTxt()
+                createTxt();
 				break;
 			case "bold":
 				canvas.isDrawingMode = false;
@@ -59,7 +56,7 @@ const toggleTools=(event)=>{
 				break;
 			case "Square":
 				canvas.isDrawingMode = false;
-                createSquare()
+                createSquare();
 				break;
 			case "Circle":
 				canvas.isDrawingMode = false;
@@ -67,21 +64,23 @@ const toggleTools=(event)=>{
 				break;
 			case "Send to front":
 				canvas.isDrawingMode = false;
-				sendToFront()
+				sendToFront();
 				break;
 			case "Send to back":
 				canvas.isDrawingMode = false;
-				sendToBack()
+				sendToBack();
 				break		
 			case "Select color":
-				changeColor()
+				changeColor();
 				canvas.isDrawingMode = false;
 				break;
 			case "Group objects":
 				canvas.isDrawingMode = false;
+				//Feature for a later release
 				break;
 			case "Share":
 				canvas.isDrawingMode = false;
+				//Feature for a later release
 				break;
 			case "Download your fresh meme":
 				canvas.isDrawingMode = false;
@@ -94,7 +93,7 @@ const toggleTools=(event)=>{
 			default:
 		}
 	
-	  }
+	}
 
       tools.addEventListener("click", toggleTools);
 

@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 import {canvas} from './canvas'
 //Send selected object to front or back
 const sendToBack=()=>{

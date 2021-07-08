@@ -1,5 +1,5 @@
  import { fabric } from "fabric";
- import { hexToRgb } from "./changeColor";
+
 
  const memeditor = document.querySelector('.memeditor')
     //create a new fabric canvas
@@ -10,7 +10,6 @@
         preserveObjectStacking: true,
     });
     canvas.isDrawingMode = false;
-    let isDrawing = false;
     
     canvas.on("object:selected", function(e){console.log(e.target);});
 

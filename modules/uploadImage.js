@@ -1,5 +1,10 @@
-
-import { scaleToFit } from "./scaleToFit";
+/*jshint esversion: 6 */
+import {
+    fabric
+} from "fabric";
+import {
+    scaleToFit
+} from "./scaleToFit";
 
 let files = document.getElementById('file-input');
 
@@ -21,7 +26,6 @@ files.onchange = function (e) {
                     scaleToFit(image);
                 }
 
-
             }
         }
 
@@ -35,4 +39,6 @@ const uploadImage = () => {
     files.click()
 }
 
-export { uploadImage }
+export {
+    uploadImage
+}
