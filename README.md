@@ -35,7 +35,7 @@ The goal of this project is to enable everyone to create and share their own [Me
 
 ### User Goals ###
 Easily create a meme and download it
-1. upload 1 or more images and/or load 1 or more images the template selection
+1. upload 1 or more images and/or load 1 or more images from the template selection
 2. add and format text
 3. add freehand drawing
 4. add graphic shapes square/circle
