@@ -17,13 +17,13 @@ const createTxt=()=>{
     txtField.enterEditing();
     txtField.hiddenTextarea.focus();
     })
-
+/*
     txtField.on("touch:longpress", function(e) {
         e.preventDefault();
         txtField.enterEditing();
         txtField.hiddenTextarea.focus();
     })
-
+*/
     canvas.add(txtField);
     canvas.viewportCenterObject(txtField); 
 }
